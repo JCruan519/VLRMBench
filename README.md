@@ -71,6 +71,39 @@ To evaluate remote models via API (e.g., OpenAI, Claude, Gemini), run:
 bash model_eval/run_online_api_eval_with_metrices.sh
 ```
 
+### 4. Get Evaluation Results
+
+After running evaluations, calculate metrics using the appropriate scripts:
+
+#### Binary Classification Tasks (SC, RD, CM, EH, AH, DE, SR, IRE)
+```bash
+python model_eval/get_sc_mc_rd_eval_res.py
+```
+
+#### Multi-Solution Task (MS)
+```bash
+python model_eval/get_ms_eval_res.py
+```
+
+#### Forecasting Future Task (FF)
+```bash
+python model_eval/get_fores_eval_res.py
+```
+
+#### Generation Tasks (ERA, EC)
+1. Run judge evaluation:
+```bash
+python model_eval/get_ec_era_eval_res.py
+```
+
+2. Calculate win rates:
+```bash
+python model_eval/get_ec_era_eval_res_after_judger.py
+```
+
+> **Note:** Update `task_name` variable in each script to match your evaluation task. For ERA/EC tasks, configure the judge model API settings in `get_ec_era_eval_res.py`.
+
+
 ---
 
 ## 📜 Citation
