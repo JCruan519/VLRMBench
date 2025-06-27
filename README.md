@@ -2,7 +2,7 @@
 
 This is the official repository for the paper:
 
-**"VLRMBench: A Comprehensive and Challenging Benchmark for Vision-Language Reward Models"**
+**"VLRMBench: A Comprehensive and Challenging Benchmark for Vision-Language Reward Models"** has been accepted by ICCV 2025.
 
 ---
 
